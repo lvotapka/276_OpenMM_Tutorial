@@ -1,6 +1,6 @@
 parm /home/lvotapka/tryp_smd/tryp_ben.prmtop
 box x 61.359 y 61.359 z 61.359 alpha 109.4712190 beta 109.4712190 gamma 109.4712190
-trajin /home/lvotapka/tryp_smd/tryp_ben_restrain_bound_state.pdb
+trajin /home/lvotapka/tryp_smd/tryp_ben_restrain_bound_state.pdb 0 100 2
 autoimage @1-3220
 trajout tryp_benz.pdb include_ep
 go
