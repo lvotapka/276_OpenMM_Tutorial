@@ -25,7 +25,8 @@ integrator = VerletIntegrator(0.002*picoseconds)
 # Create a simulation object.
 simulation = Simulation(pdb.topology, system, integrator)
 
-# Uncomment the following line to create a simulation that uses one of the GPUs.
+# Uncomment the following lines to create a simulation that uses one of the GPUs.
+# If you do that, you'll want to delete the 'simulation = ...' line above here.
 #platform = Platform.getPlatformByName('CUDA')
 #properties = {'CudaDeviceIndex': '0', 'CudaPrecision': 'mixed'}
 #simulation = Simulation(pdb.topology, system, integrator, platform, properties)
