@@ -20,7 +20,7 @@ params = CharmmParameterSet(
 system = psf.createSystem(params, nonbondedMethod=PME, nonbondedCutoff=1*nanometer, constraints=HBonds)
 
 # Create a Langevin integrator for constant temperature.
-integrator = LangevinMiddleIntegrator(300.0*kelvin, 1/picosecond, 0.004*picoseconds)
+integrator = LangevinIntegrator(300.0*kelvin, 1/picosecond, 0.002*picoseconds)
 
 # Define a barostat to maintain constant pressure for equilibration
 barostat = MonteCarloBarostat(1.0*bar, 300.0*kelvin, 25)
