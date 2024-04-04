@@ -21,7 +21,7 @@ params = CharmmParameterSet('charmm-gui-4183093546/toppar/par_all36m_prot.prm',
 system = psf.createSystem(params, nonbondedMethod=PME, nonbondedCutoff=1*nanometer, constraints=HBonds)
 
 # Create a Langevin integrator for constant temperature.
-integrator = LangevinMiddleIntegrator(300.0*kelvin, 1/picosecond, 0.004*picoseconds)
+integrator = LangevinIntegrator(300.0*kelvin, 1/picosecond, 0.002*picoseconds)
 
 # This barostat is designed for membrane simulations.
 barostat = MonteCarloMembraneBarostat(1.0*bar, 0.0*bar*nanometers, 310.0*kelvin, MonteCarloMembraneBarostat.XYIsotropic, MonteCarloMembraneBarostat.ZFixed)
