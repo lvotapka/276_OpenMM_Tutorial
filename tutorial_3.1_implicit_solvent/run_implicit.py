@@ -9,6 +9,13 @@ inpcrd = AmberInpcrdFile('alanine_dipeptide.inpcrd')
 # Create the system with an implicit solvent and rigid bonds
 system = prmtop.createSystem(implicitSolvent=OBC2, implicitSolventKappa=1.0/nanometer, constraints=HBonds)
 
+output_xml_system_filename = "alanine_dipeptide.xml"
+print("writing to file:", output_xml_system_filename)
+with open(output_xml_system_filename, "w") as f:
+    f.write(openmm.XmlSerializer.serialize(system))
+
+
+exit()
 # Create a Langevin integrator for constant temperature.
 integrator = LangevinMiddleIntegrator(300.0*kelvin, 1/picosecond, 0.004*picoseconds)
 

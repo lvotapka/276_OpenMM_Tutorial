@@ -62,5 +62,5 @@ for i, cluster in enumerate(cluster_frames):
     
     # Save centroid structures
     centroid_name = "tryp_ben_centroid_{}.pdb".format(i)
-    traj[i].save(centroid_name)
+    traj[cluster[index]].save(centroid_name)
 
